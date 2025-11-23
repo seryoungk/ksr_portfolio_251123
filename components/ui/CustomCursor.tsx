@@ -15,6 +15,10 @@ export default function CustomCursor() {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
+    // Only run on devices with a "fine" pointer (mouse/trackpad), not touch
+    const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+    if (!isFinePointer) return;
+
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX - 18); // Center the 36px cursor
       cursorY.set(e.clientY - 18);
