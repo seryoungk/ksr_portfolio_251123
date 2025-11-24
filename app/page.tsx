@@ -72,7 +72,7 @@ export default function Home() {
           {RESUME_DATA.personal.intro}
         </FadeUp>
 
-        <FadeUp delay={1} className="mt-10 flex flex-wrap gap-4">
+        <FadeUp delay={1} className="mt-10 flex flex-wrap md:gap-4 gap-2">
           <Link
             href={RESUME_DATA.personal.github}
             target="_blank"
@@ -336,7 +336,7 @@ export default function Home() {
         </FadeUp>
       </section>
 
-      <footer className="border-t border-white/40 py-8 text-center text-sm text-neutral-500 glass">
+      <footer className="border-t border-white/40 py-4 md:py-8 text-center text-sm text-neutral-500 glass">
         © {new Date().getFullYear()} Seryoung Kwak. All rights reserved.
       </footer>
     </main>
