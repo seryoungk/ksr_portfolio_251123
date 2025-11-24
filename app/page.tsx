@@ -29,7 +29,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 glass border-b border-white/40">
         <div className="text-xl font-bold tracking-tighter text-pink-600">
-          SK.
+          Portfolio
         </div>
         <div className="flex gap-4 text-sm text-neutral-600 font-medium">
           <a href="#about" className="hover:text-pink-600 transition-colors">
@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="flex min-h-screen flex-col justify-center px-6 pt-[100px] md:px-20 lg:px-40"
+        className="flex min-h-screen flex-col justify-center px-6 pt-[100px] md:pt-0 md:px-20 lg:px-40"
         id="about"
       >
         <FadeUp delay={0.2}>
@@ -130,21 +130,27 @@ export default function Home() {
             <FadeUp key={index} delay={index * 0.1}>
               <SpotlightCard className="group hover:shadow-pink-200/50">
                 <div className="mb-4 flex flex-col justify-between md:flex-row md:items-end">
-                  <div>
-                    <h4 className="text-2xl font-bold text-neutral-800 group-hover:text-pink-600 transition-colors">
-                      {exp.company}
-                    </h4>
-                    <p className="text-pink-500">{exp.role}</p>
+                  <h4 className="text-2xl md:text-3xl font-bold text-neutral-800 group-hover:text-pink-600 transition-colors">
+                    {exp.company}
+                  </h4>
+                  <div className="flex items-center gap-2 mt-1">
+                    <p className="text-base md:text-lg text-pink-500">
+                      {exp.role}
+                    </p>
+                    <span className="text-sm md:text-base text-neutral-500">
+                      {exp.period}
+                    </span>
                   </div>
-                  <span className="text-sm text-neutral-500">{exp.period}</span>
                 </div>
-                <p className="mb-6 text-neutral-600">{exp.description}</p>
+                <p className="mb-6 text-base md:text-lg text-neutral-600">
+                  {exp.description}
+                </p>
 
                 <div className="mb-4 flex flex-wrap gap-2">
                   {exp.tech.map((t, i) => (
                     <span
                       key={i}
-                      className="text-xs rounded bg-white/60 px-2 py-1 text-neutral-600 border border-white/40"
+                      className="text-xs md:text-sm rounded bg-white/60 px-2 py-1 text-neutral-600 border border-white/40"
                     >
                       {t}
                     </span>
@@ -157,14 +163,14 @@ export default function Home() {
                       key={pIndex}
                       className="border-l-2 border-pink-200 pl-4"
                     >
-                      <h5 className="mb-2 text-lg font-semibold text-neutral-700">
+                      <h5 className="mb-2 text-lg md:text-xl font-semibold text-neutral-700">
                         {project.title}
                       </h5>
                       <ul className="list-none space-y-1">
                         {project.details.map((detail, dIndex) => (
                           <li
                             key={dIndex}
-                            className="text-sm text-neutral-600 before:content-['-'] before:mr-2"
+                            className="text-sm md:text-base text-neutral-600 before:content-['•'] before:mr-2"
                           >
                             {detail}
                           </li>
@@ -178,7 +184,7 @@ export default function Home() {
                     <Link
                       href={exp.link}
                       target="_blank"
-                      className="inline-flex items-center gap-1 text-sm text-pink-500 font-medium mt-2"
+                      className="inline-flex items-center gap-1 text-sm md:text-base text-pink-500 font-medium mt-2"
                     >
                       {exp.linkText} <ArrowUpRight size={14} />
                     </Link>
@@ -203,21 +209,27 @@ export default function Home() {
               <SpotlightCard className="hover:shadow-pink-200/50">
                 <div className="mb-4 flex flex-col justify-between md:flex-row md:items-end">
                   <div>
-                    <h4 className="text-2xl font-bold text-neutral-800">
+                    <h4 className="text-2xl md:text-3xl font-bold text-neutral-800">
                       {project.company}
                     </h4>
-                    <p className="text-pink-500">{project.role}</p>
                   </div>
-                  <span className="text-sm text-neutral-500">
-                    {project.period}
-                  </span>
+                  <div className="flex items-center gap-2 mt-1">
+                    <p className="text-base md:text-lg text-pink-500">
+                      {project.role}
+                    </p>
+                    <span className="text-sm md:text-base text-neutral-500">
+                      {project.period}
+                    </span>
+                  </div>
                 </div>
-                <p className="mb-4 text-neutral-600">{project.description}</p>
+                <p className="mb-4 text-base md:text-lg text-neutral-600">
+                  {project.description}
+                </p>
                 <div className="mb-4 flex flex-wrap gap-2">
                   {project.tech.map((t, i) => (
                     <span
                       key={i}
-                      className="text-xs rounded bg-white/60 px-2 py-1 text-neutral-600 border border-white/40"
+                      className="text-xs md:text-sm rounded bg-white/60 px-2 py-1 text-neutral-600 border border-white/40"
                     >
                       {t}
                     </span>
@@ -227,7 +239,7 @@ export default function Home() {
                   {project.details.map((detail, dIndex) => (
                     <li
                       key={dIndex}
-                      className="text-sm text-neutral-600 before:content-['-'] before:mr-2"
+                      className="text-sm md:text-base text-neutral-600 before:content-['•'] before:mr-2"
                     >
                       {detail}
                     </li>
@@ -264,17 +276,14 @@ export default function Home() {
             <h3 className="mb-6 text-2xl font-bold text-neutral-800">
               Certifications
             </h3>
-            <ul className="space-y-3">
+            <div className="space-y-3">
               {RESUME_DATA.certifications.map((cert, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-center gap-3 text-neutral-600"
-                >
-                  <div className="h-2 w-2 rounded-full bg-pink-500"></div>
-                  {cert}
-                </li>
+                <div key={idx} className="border-l-2 border-pink-300 pl-4">
+                  <p className="text-neutral-600">{cert.testName}</p>
+                  <p className="text-sm text-neutral-500">{cert.time}</p>
+                </div>
               ))}
-            </ul>
+            </div>
           </FadeUp>
         </div>
       </section>

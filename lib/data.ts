@@ -46,7 +46,7 @@ export const RESUME_DATA = {
       ],
     },
     {
-      company: "아트스푼",
+      company: "아트라식스",
       role: "프론트엔드 개발자",
       period: "2024.02 ~ 2025.07",
       description: "미술품 관리 웹 서비스 제공 스타트업",
@@ -150,8 +150,17 @@ export const RESUME_DATA = {
     },
   ],
   certifications: [
-    "TOEIC 840 (2023. 08. 06)",
-    "OPIC IH (2021. 12. 22)",
-    "JPT 470 (2021. 05)",
+    {
+      testName: "TOEIC 840",
+      time: "2023. 08. 06",
+    },
+    {
+      testName: "OPIC IH",
+      time: "2021. 12. 22",
+    },
+    {
+      testName: "JPT 470",
+      time: "2021. 05. 16",
+    },
   ],
 };
