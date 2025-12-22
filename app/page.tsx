@@ -279,7 +279,7 @@ export default function Home() {
             <div className="space-y-3">
               {RESUME_DATA.certifications.map((cert, idx) => (
                 <div key={idx} className="border-l-2 border-pink-300 pl-4">
-                  <p className="text-neutral-600">{cert.testName}</p>
+                  <p className="text-neutral-800">{cert.testName}</p>
                   <p className="text-sm text-neutral-500">{cert.time}</p>
                 </div>
               ))}

@@ -35,12 +35,23 @@ export const RESUME_DATA = {
       tech: ["AEM(HTL)", "JavaScript", "SCSS"],
       projects: [
         {
-          title: "LG CNS 공식 웹사이트 개발 및 유지보수",
+          title: "LG CNS 공식 웹사이트 개발",
           details: [
-            "LG CNS 공식 웹사이트 요금표, 팝업, 챗봇, 기업 설명 페이지 등 개발",
+            "관리자가 요금 데이터를 직접 입력하면, 사용자에게 요금제 가격과 결제 주기를 노출하는 요금제 컴포넌트를 기획·디자인·개발까지 단독으로 담당",
+            "메인 화면에 노출되는 팝업 컴포넌트를 개발하고, 디자인 수정 단계부터 참여하여 UI 구현",
+            "챗봇을 화면에 호출하는 프론트엔드 UI 작업",
+            "연관 콘텐츠(Series 자료)에 'Series' 태그를 노출하는 UI를 직접 디자인하고 개발",
+            "Marketo 다운로드 기능에서 연속 클릭으로 인한 중복 다운로드 이슈를 방지하기 위해, 다운로드 버튼 비활성화 UI를 설계하고 직접 개발",
+            "Marketo 문의 기능에서 파일 첨부 시 Drag & Drop 및 파일 창을 통한 업로드가 가능하도록 UI를 기획·디자인·개발하였으며",
+            "파일 업로드 진행 상태 및 첨부 파일 리스트 UI까지 함께 구현",
+          ],
+        },
+        {
+          title: "LG CNS 공식 웹사이트 유지보수",
+          details: [
             "AEM 기반 데이터 처리: Java 모델 개발 및 AEM 다이얼로그 구성",
             "UI/UX 개선: 반응형 레이아웃 최적화, 네비게이션 개선, 팝업 표준화",
-            "JavaScript 로직: CSS 동적 제어, 조건부 렌더링, Google Maps 임베딩",
+            "HTML/Javascript: Google Maps 임베딩, HTML 수정을 통한 Authoring",
           ],
         },
       ],
@@ -127,7 +138,7 @@ export const RESUME_DATA = {
     {
       company: "HI-ME",
       role: "프론트엔드 개발자",
-      period: "2025.09 ~ 2026.04",
+      period: "2025.09 ~ 2025.12",
       description: "헬스케어 관련 서비스",
       tech: ["React", "Typescript", "Tanstack"],
       details: [
@@ -150,6 +161,10 @@ export const RESUME_DATA = {
     },
   ],
   certifications: [
+    {
+      testName: "AEM Business Practitioner Professional",
+      time: "2025. 12. 16",
+    },
     {
       testName: "TOEIC 840",
       time: "2023. 08. 06",
